@@ -1,0 +1,92 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "Sabes.. Tranquilamente podría acabar contigo aquí y ahora...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "pinga"
+		},
+		{
+			"expression": "pissed",
+			"text": "Lucasta... Eso no me asusta o íntimida en lo más mínimo",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "duxohabla",
+			"text": "¿Qué te parece si cantamos otra a ver quién sale ganando?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "talk",
+			"text": "¿Ganando? Amigo podría matarte y listo... ¡NO HAY ESCAPATORIA!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "pinga"
+		},
+		{
+			"expression": "talk",
+			"text": "Estás en medio del caos en el paralelo...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "pinga"
+		},
+		{
+			"expression": "duxoconfuso",
+			"text": "Espera... Escuché eso antes... ¿Es esto es una pesadilla o algo así?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "talk",
+			"text": "Si... Y una muy real...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "pinga"
+		},
+		{
+			"expression": "duxoconfuso",
+			"text": "Entonces... Si muero, ¿qué pasará?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "talk",
+			"text": "Morirás.                                       (¿en serio? no me digas)",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "pinga"
+		},
+		{
+			"expression": "duxohabla",
+			"text": "¿Y qué tal si no?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "talk",
+			"text": "Esa no es una opción válida hermano, empecemos de una vez.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "pinga"
+		}
+	]
+}

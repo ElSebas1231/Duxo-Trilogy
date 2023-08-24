@@ -1,0 +1,140 @@
+{
+	"dialogue": [
+		{
+			"expression": "duxo tite",
+			"text": "Que bueno que logré escapar cuando todo se puso oscuro...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "duxohabla",
+			"text": "Tengo que darme prisa e irme de aquí, pero ya.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "duxo nervioso",
+			"text": "Es como si la noche fuese eterna.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "talk",
+			"text": "* Sonido de objeto caído *",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "duxo nervioso",
+			"text": "No puede ser...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "Duxo"
+		},
+		{
+			"expression": "talk",
+			"text": "Bueno... Bueno... Bueno...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": ""
+		},
+		{
+			"expression": "talk",
+			"text": "¡Pero si es Duxo!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "nada"
+		},
+		{
+			"expression": "duxoconfuso",
+			"text": "¿Lucasta?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "duxo nervioso",
+			"text": "Te ves diferente.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "duxohabla",
+			"text": "¿Nuevo outfit?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "talk",
+			"text": "Muy gracioso.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "pinga"
+		},
+		{
+			"expression": "talk",
+			"text": "Parece que la estás pasando bien.",
+			"boxState": "normal",
+			"portrait": "pinga",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "duxohabla",
+			"text": "¿Qué puedo decir?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "duxohabla",
+			"text": "Todo este caos en vez de asustarme, me está subiendo la adrenalina.",
+			"boxState": "normal",
+			"portrait": "duxo",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "talk",
+			"text": "Entonces...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "pinga"
+		},
+		{
+			"expression": "pissed",
+			"text": "¿Qué te parece si la subimos aún más?",
+			"boxState": "normal",
+			"portrait": "pinga",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "duxohabla",
+			"text": "No estaría nada mal.",
+			"boxState": "normal",
+			"portrait": "duxo",
+			"speed": 0.05,
+			"sound": ""
+		}
+	]
+}

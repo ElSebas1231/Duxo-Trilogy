@@ -1,0 +1,68 @@
+{
+	"dialogue": [
+		{
+			"expression": "duxo nervioso",
+			"text": "Espera...",
+			"boxState": "normal",
+			"portrait": "duxo",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "duxoconfuso",
+			"text": "¿Esa es la limo de Tomy?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "duxo"
+		},
+		{
+			"expression": "duxo tite",
+			"text": "No se ve muy bien... No creo que funcione...",
+			"boxState": "normal",
+			"portrait": "duxo",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "duxo tite",
+			"text": "Mierda, eso pudo servir para llegar al mall...",
+			"boxState": "normal",
+			"portrait": "duxo",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "talk",
+			"text": "Hola Duxo...",
+			"boxState": "normal",
+			"portrait": "nada",
+			"speed": 0.13,
+			"sound": ""
+		},
+		{
+			"expression": "duxo nervioso",
+			"text": "Tengo el presentimiento que esto no saldrá bien",
+			"boxState": "normal",
+			"portrait": "duxo",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "duxoconfuso",
+			"text": "Espera...",
+			"boxState": "normal",
+			"portrait": "duxo",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "duxo miedo",
+			"text": "¡¿LAU?!",
+			"boxState": "angry",
+			"portrait": "duxo",
+			"speed": 0.05,
+			"sound": ""
+		}
+	]
+}

@@ -1,0 +1,266 @@
+{
+	"song": {
+		"events": [
+			[
+				0.48828125,
+				[
+					[
+						"Play Animation",
+						"fadeIn",
+						"dad"
+					]
+				]
+			],
+			[
+				11718.75,
+				[
+					[
+						"Intro",
+						"Sonando:",
+						"Restless\nCover de: Kimakurus Music"
+					]
+				]
+			],
+			[
+				16125,
+				[
+					[
+						"Intro2",
+						"Canción original:",
+						"Monochrome\nDe Hypno's Lullaby"
+					]
+				]
+			],
+			[
+				34500,
+				[
+					[
+						"Celebi",
+						"0.6",
+						""
+					],
+					[
+						"Alt Idle Animation",
+						"gf",
+						"-alt"
+					],
+					[
+						"Play Animation",
+						"Spawn",
+						"gf"
+					]
+				]
+			],
+			[
+				36000,
+				[
+					[
+						"Alt Idle Animation",
+						"gf",
+						""
+					],
+					[
+						"Play Animation",
+						"Leave",
+						"gf"
+					]
+				]
+			],
+			[
+				47250,
+				[
+					[
+						"imageflash",
+						"Mau_Jumpscare",
+						"0.75"
+					],
+					[
+						"Screen Shake",
+						"0.75, 0.05",
+						"0.75, 0.05"
+					]
+				]
+			],
+			[
+				76500,
+				[
+					[
+						"Celebi",
+						"1.2",
+						""
+					],
+					[
+						"Alt Idle Animation",
+						"gf",
+						"-alt"
+					],
+					[
+						"Play Animation",
+						"Spawn",
+						"gf"
+					]
+				]
+			],
+			[
+				78000,
+				[
+					[
+						"Play Animation",
+						"Leave",
+						"gf"
+					],
+					[
+						"Alt Idle Animation",
+						"gf",
+						""
+					]
+				]
+			],
+			[
+				89250,
+				[
+					[
+						"imageflash",
+						"Mau_Jumpscare",
+						"0.40"
+					],
+					[
+						"Screen Shake",
+						"0.4, 0.05",
+						"0.4, 0.05"
+					]
+				]
+			],
+			[
+				90375,
+				[
+					[
+						"imageflash",
+						"Mau_Jumpscare",
+						"0.4"
+					],
+					[
+						"Screen Shake",
+						"0.40, 0.05",
+						"0.40, 0.05"
+					]
+				]
+			],
+			[
+				91125,
+				[
+					[
+						"Screen Shake",
+						"0.40, 0.05",
+						"0.40, 0.05"
+					],
+					[
+						"imageflash",
+						"Mau_Jumpscare",
+						"0.4"
+					]
+				]
+			],
+			[
+				91875,
+				[
+					[
+						"imageflash",
+						"Mau_Jumpscare",
+						"0.4"
+					],
+					[
+						"Screen Shake",
+						"0.4, 0.05",
+						"0.4, 0.05"
+					]
+				]
+			],
+			[
+				104625,
+				[
+					[
+						"Screen Shake",
+						"0.4, 0.05",
+						"0.4, 0.05"
+					],
+					[
+						"imageflash",
+						"Mau_Jumpscare",
+						"0.4"
+					]
+				]
+			],
+			[
+				113250,
+				[
+					[
+						"imageflash",
+						"Mau_Jumpscare",
+						"0.75"
+					],
+					[
+						"Screen Shake",
+						"0.75, 0.05",
+						"0.75, 0.05"
+					]
+				]
+			],
+			[
+				118500,
+				[
+					[
+						"Alt Idle Animation",
+						"gf",
+						"-alt"
+					],
+					[
+						"Play Animation",
+						"Spawn",
+						"gf"
+					]
+				]
+			],
+			[
+				120000,
+				[
+					[
+						"Alt Idle Animation",
+						"gf",
+						""
+					],
+					[
+						"Play Animation",
+						"Leave",
+						"gf"
+					]
+				]
+			],
+			[
+				144000,
+				[
+					[
+						"Screen Shake",
+						"0.75, 0.05",
+						"0.75, 0.05"
+					],
+					[
+						"imageflash",
+						"Mau_Jumpscare",
+						"0.75"
+					]
+				]
+			],
+			[
+				146625,
+				[
+					[
+						"Play Animation",
+						"fadeOut",
+						"dad"
+					]
+				]
+			]
+		]
+	}
+}
