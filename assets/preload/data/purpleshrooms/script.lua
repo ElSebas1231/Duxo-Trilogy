@@ -29,7 +29,7 @@ function onSongStart()
 	if isStoryMode and not seenCutscene then
 		triggerEvent('IntroC', 'Creisi y Andreh', '¿Editores de Duxo?')
 	else
-		triggerEvent('IntroA', 'Sonando:', 'PurpleshroomsDe: Kimakurus Music')
+		triggerEvent('IntroA', 'Sonando:', 'Purpleshrooms\nDe: Kimakurus Music')
 	end	
 end
 
