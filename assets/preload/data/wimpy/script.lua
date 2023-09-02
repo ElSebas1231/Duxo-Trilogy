@@ -30,12 +30,12 @@ function onSongStart()
 		triggerEvent('Intro', 'AQUINOby02', 'Mejor Amigo de Duxo')
 	else
 		triggerEvent('Intro2', 'Sonando:', 'Wimpy - Cótiles\nCover de: Laleritose')
-	end	
+	end
 end
 
 function onStepHit()
 	if isStoryMode and not seenCutscene then
-		if curStep == 50 then
+		if curStep == 50 and seenCutscene then
 			triggerEvent('Intro2', 'Sonando:', 'Wimpy - Cótiles\nCover de: Laleritose')
 		end
 	end

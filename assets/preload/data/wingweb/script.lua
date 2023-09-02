@@ -10,9 +10,16 @@ function onStartCountdown()
 	return Function_Continue;
 end
 
+function onCreate()
+	if isStoryMode and not seenCutscene then
+		setProperty('camFollowPos.x', getProperty('boyfriend.x') - 200)
+		setProperty('camFollowPos.y', getProperty('boyfriend.y') + 50)
+	end
+end
+
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'startDialogue' then -- Timer completed, play dialogue
-		startDialogue('dialogue', 'breakfast');
+		startDialogue('dialogue');
 	end
 end
 
@@ -70,4 +77,18 @@ function onCreatePost()
 			end
         end
     end
+end
+
+function onCountdownTick(counter)
+	if counter == 0 then
+		if isStoryMode and not seenCutscene then
+			for w = 0,getProperty('unspawnNotes.length')-1 do
+				if not getPropertyFromGroup('unspawnNotes', w, 'mustPress') then
+        			if getPropertyFromGroup('unspawnNotes', w, 'noteData') == 2 or getPropertyFromGroup('unspawnNotes',w,'noteData') == 3 then
+            			setPropertyFromGroup('unspawnNotes', w, 'texture', 'Corrupnote_assets');
+					end
+				end
+			end
+		end
+	end
 end

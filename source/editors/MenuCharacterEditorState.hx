@@ -183,7 +183,7 @@ class MenuCharacterEditorState extends MusicBeatState
 			characterFile.flipX = flipXCheckbox.checked;
 		};
 
-		var reloadImageButton:FlxButton = new FlxButton(140, confirmInputText.y + 30, "Cargar Pers.", function() {
+		var reloadImageButton:FlxButton = new FlxButton(140, confirmInputText.y + 30, "Recargar Pers.", function() {
 			reloadSelectedCharacter();
 		});
 		
