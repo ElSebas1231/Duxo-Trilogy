@@ -415,7 +415,7 @@ class PlayState extends MusicBeatState
 			'feriapayasito', 'feriapayasitoevil', 'lau',
 			'laulimo', 'limotomy', 'mallduxo', 'mallduxoevil',
 			'missingno', 'mono', 'pingasta','pingasta2', 'side', 
-			'sotanoxd', 'thunder', 'tiky', 'ytfondo'
+			'sotanoxd', 'school', 'spooky', 'thunder', 'tiky', 'ytfondo'
 		];
 
 		var rpcSongs:Array<String> = [
