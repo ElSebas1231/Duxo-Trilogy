@@ -82,12 +82,8 @@ end
 function onCountdownTick(counter)
 	if counter == 0 then
 		if isStoryMode and not seenCutscene then
-			for w = 0,getProperty('unspawnNotes.length')-1 do
-				if not getPropertyFromGroup('unspawnNotes', w, 'mustPress') then
-        			if getPropertyFromGroup('unspawnNotes', w, 'noteData') == 2 or getPropertyFromGroup('unspawnNotes',w,'noteData') == 3 then
-            			setPropertyFromGroup('unspawnNotes', w, 'texture', 'Corrupnote_assets');
-					end
-				end
+			for i = 2, getProperty('opponentStrums.length')-1 do
+				setPropertyFromGroup('opponentStrums', i, 'texture', 'Corrupnote_assets');
 			end
 		end
 	end

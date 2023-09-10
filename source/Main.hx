@@ -101,6 +101,10 @@ class Main extends Sprite
 		FlxG.mouse.visible = false;
 		#end
 		
+		#if desktop
+		DiscordClient.start();
+		#end
+
 		#if CRASH_HANDLER
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 		#end
@@ -119,7 +123,7 @@ class Main extends Sprite
 		dateNow = dateNow.replace(" ", "_");
 		dateNow = dateNow.replace(":", "'");
 
-		path = "./crashlogs/" + "DUXOTC_" + dateNow + ".txt";
+		path = "./crashlogs/" + "DUXOCT_" + dateNow + ".txt";
 
 		for (stackItem in callStack)
 		{
@@ -143,6 +147,9 @@ class Main extends Sprite
 		Sys.println("Log de crasheo guardado en: " + Path.normalize(path));
 
 		Application.current.window.alert(errMsg, "ERROR!");
+		#if desktop
+		DiscordClient.shutdown();
+		#end
 		MusicBeatState.switchState(new MainMenuState());
 	}
 	#end

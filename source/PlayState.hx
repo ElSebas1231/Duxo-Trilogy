@@ -408,6 +408,21 @@ class PlayState extends MusicBeatState
 		GameOverSubstate.resetVariables();
 		var songName:String = Paths.formatToSongPath(SONG.song);
 
+		var rpcStages:Array<String> = [
+			'amquino', 'andreh', 'c3jomall', 'canceladobg',
+			'comercialbg', 'creisibg', 'cuartocreisi',
+			'don', 'enano', 'end', 'endless',
+			'feriapayasito', 'feriapayasitoevil', 'lau',
+			'laulimo', 'limotomy', 'mallduxo', 'mallduxoevil',
+			'missingno', 'mono', 'pingasta','pingasta2', 'side', 
+			'sotanoxd', 'thunder', 'tiky', 'ytfondo'
+		];
+
+		var rpcSongs:Array<String> = [
+			'wimpy', 'restless', 'maussigno',
+			'lata-pro', 'esotilin'
+		];
+
 		curStage = SONG.stage;
 		//trace('stage is: ' + curStage);
 		if(SONG.stage == null || SONG.stage.length < 1) {
@@ -418,63 +433,35 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		stagePortrait = curStage;
-
-		switch (curStage) //Tweaking the discord rpc in the worst posible way
-		{
-			case 'escenarioSus' | 'stage':
-				stagePortrait = 'escenariosus';
-
-			case 'c3joMall':
-				stagePortrait = 'c3jomall';
-
-			case 'feriaPayasito':
-				stagePortrait = 'feriapayasito';
-
-			case 'feriaPayasitoEvil':
-				stagePortrait = 'feriapayasitoevil';
-
-			case 'mallduxoEvil':
-				stagePortrait = 'mallduxoevil';
-
-			case 'nemo' | 'newnemo':
-				stagePortrait = 'nimu';
-
-			case 'cuzvy' | 'thunder':
-				stagePortrait = 'cuzvy';
-
-			case 'TripleTroubleBackground':
-				stagePortrait = 'tt';
-
-			case 'mono':
-				stagePortrait = 'mono';
-			
-			case 'week17' | 'blu':
-				stagePortrait = 'week17';
+		//Stuff for the RPC thing
+		if(stagePortrait == null || stagePortrait == ''){
+			stagePortrait = 'stage';
 		}
 
-		switch (songName)
-		{
-			case 'wimpy':
-				stagePortrait = 'wimpy';
+		for (d in 0...rpcStages.length){
+			if (curStage.toLowerCase() == rpcStages[d]){
+				stagePortrait = rpcStages[d];
+			}
+		}
 
-			case 'restless':
-				stagePortrait = 'restless';
+		if (curStage == 'escenarioSus' || curStage == 'stage'){
+			stagePortrait = 'escenariosus';
+		}else if (curStage == 'nemo' || curStage == 'newnemo'){
+			stagePortrait = 'nimu';
+		}else if (curStage == 'cuzvy' || curStage == 'thunder'){
+			stagePortrait = 'cuzvy';
+		}else if (curStage == 'TripleTroubleBackground'){
+			stagePortrait = 'tt';
+		}else if (curStage == 'week17' || curStage == 'blu'){
+			stagePortrait = 'week17';
+		}
 
-			case 'maussigno':
-				stagePortrait = 'missingno';
-
-			case 'lata-pro':
-				stagePortrait = 'lata-pro';
-
-			case '4mesesdesub':
-				stagePortrait = '4mesesdesub';
-				
-			case 'test' | 'enano':
+		for (s in 0...rpcSongs.length){
+			if (songName == rpcSongs[s]){
+				stagePortrait == rpcSongs[s];
+			}else if(songName == 'test' || songName == 'enano'){
 				stagePortrait = 'enanoalt';
-				
-			case 'esotilin':
-				stagePortrait = 'esotilin';
+			}
 		}
 
 		var stageData:StageFile = StageData.getStageFile(curStage);
@@ -3691,7 +3678,7 @@ class PlayState extends MusicBeatState
 				combo = 0;
 			}
 
-			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
+			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.2, 0.3));
 
 			if(!practiceMode) songScore -= 10;
 			if(!endingSong) {
@@ -3712,7 +3699,7 @@ class PlayState extends MusicBeatState
 
 			if(boyfriend.hasMissAnimations) {
 				boyfriend.playAnim(singAnimations[Std.int(Math.abs(direction))] + 'miss', true);
-				FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
+				FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.2, 0.3));
 			}
 			vocals.volume = 0;
 		}

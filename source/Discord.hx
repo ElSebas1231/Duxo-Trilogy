@@ -2,6 +2,7 @@ package;
 
 import Sys.sleep;
 import discord_rpc.DiscordRpc;
+import lime.app.Application;
 
 #if LUA_ALLOWED
 import llua.Lua;
@@ -30,23 +31,38 @@ class DiscordClient
 			sleep(2);
 			//trace("Discord Client Update");
 		}
-
-		DiscordRpc.shutdown();
 	}
 	
 	public static function shutdown()
 	{
 		DiscordRpc.shutdown();
 	}
+		
+	public static function start()
+	{
+		if (ClientPrefs.discordRPC){
+			if (!isInitialized){
+				initialize();
+				Application.current.window.onClose.add(function() {
+					shutdown();
+				});
+			}
+		}
+	}
 	
 	static function onReady()
 	{
-		DiscordRpc.presence({
-			details: "Empezando el juego...",
-			state: null,
-			largeImageKey: 'icon',
-			largeImageText: "FNF X DUXO: Complete Trilogy"
-		});
+		if(isInitialized && ClientPrefs.discordRPC){
+			DiscordRpc.presence({
+				details: "Cargando...",
+				state: null,
+				largeImageKey: 'icon',
+				largeImageText: "FNF X DUXO: Complete Trilogy"
+			});
+			Application.current.window.onClose.add(function() {
+				shutdown();
+			});
+		}
 	}
 
 	static function onError(_code:Int, _message:String)
@@ -78,17 +94,18 @@ class DiscordClient
 			endTimestamp = startTimestamp + endTimestamp;
 		}
 
-		DiscordRpc.presence({
-			details: details,
-			state: state,
-			largeImageKey: stagePortrait, //used to change the RPC Image
-			largeImageText: "Versión de Psych Engine: " + MainMenuState.psychEngineVersion,
-			smallImageKey : smallImageKey,
-			// Obtained times are in milliseconds so they are divided so Discord can use it
-			startTimestamp : Std.int(startTimestamp / 1000),
-            endTimestamp : Std.int(endTimestamp / 1000)	
-		});
-
+		if(isInitialized && ClientPrefs.discordRPC){
+			DiscordRpc.presence({
+				details: details,
+				state: state,
+				largeImageKey: stagePortrait, //used to change the RPC Image
+				largeImageText: "Versión de Psych Engine: " + MainMenuState.psychEngineVersion,
+				smallImageKey : smallImageKey,
+				// Obtained times are in milliseconds so they are divided so Discord can use it
+				startTimestamp : Std.int(startTimestamp / 1000),
+            	endTimestamp : Std.int(endTimestamp / 1000)	
+			});
+		}
 		//trace('RPC de Discord Actualizada. Argumentos: $details, $state, $smallImageKey, $hasStartTimestamp, $endTimestamp');
 	}
 

@@ -61,6 +61,15 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
+		#if desktop
+		var option:Option = new Option('Discord Rich Presence',
+			"Desactiva esto si no quieres que se muestre tu actividad en Discord\nNota: deberás de tener activada la opción en Discord",
+			'discordRPC',
+			'bool');
+		addOption(option);
+		option.onChange = onChangeRPC;
+		#end
+
 		var option:Option = new Option('Zooms de Cámara',
 			"Si está desactivado, el HUD no hará un zoom en un Beat.",
 			'camZooms',
@@ -75,7 +84,7 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
-		var option:Option = new Option('Transparencia de HealtBar:',
+		var option:Option = new Option('Transparencia de HealthBar:',
 			'¿Qué tanta transparencia quieres que sea de la barra de vida e íconos?',
 			'healthBarAlpha',
 			'percent',
@@ -144,6 +153,7 @@ class VisualsUISubState extends BaseOptionsMenu
 
 	var changedMusic:Bool = false;
 	var changedMenu:Bool = false;
+	var changedRPC:Bool = false;
 
 	function onChangePauseMusic()
 	{
@@ -155,6 +165,18 @@ class VisualsUISubState extends BaseOptionsMenu
 			FlxG.sound.playMusic(Paths.music(Paths.formatToSongPath(ClientPrefs.pauseMusic)));
 
 		changedMusic = true;
+	}
+
+	function onChangeRPC(){
+		if(!ClientPrefs.discordRPC){
+			if(DiscordClient.isInitialized){
+				DiscordClient.shutdown();
+			}
+		}else{
+			DiscordClient.isInitialized = false;
+		}
+
+		changedRPC = true;
 	}
 
 	function onChangeMenuMusic()
@@ -173,7 +195,7 @@ class VisualsUISubState extends BaseOptionsMenu
 
 	override function destroy()
 	{
-		if(changedMusic  && !options.OptionsState.onPlayState){
+		if(changedMusic && !options.OptionsState.onPlayState){
 			if (ClientPrefs.titleVer == 'DLC 1'){
 				FlxG.sound.playMusic(Paths.music('freakyMenuDM1'));
 			}else if (ClientPrefs.titleVer == 'DLC 2'){
@@ -187,6 +209,12 @@ class VisualsUISubState extends BaseOptionsMenu
 
 		if(changedMenu){
 			FreeplayState.instPlay = false;
+		}
+
+		if (changedRPC){
+			if (ClientPrefs.discordRPC && !DiscordClient.isInitialized){
+				DiscordClient.initialize();
+			}
 		}
 
 		super.destroy();
