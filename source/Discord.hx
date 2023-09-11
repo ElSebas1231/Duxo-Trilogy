@@ -59,9 +59,6 @@ class DiscordClient
 				largeImageKey: 'icon',
 				largeImageText: "FNF X DUXO: Complete Trilogy"
 			});
-			Application.current.window.onClose.add(function() {
-				shutdown();
-			});
 		}
 	}
 
