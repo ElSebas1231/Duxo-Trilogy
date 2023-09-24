@@ -221,6 +221,9 @@ class PauseSubState extends MusicBeatSubstate
 	var cantUnpause:Float = 0.1;
 	override function update(elapsed:Float)
 	{
+		var shiftMult:Int = 1;
+		if(FlxG.keys.pressed.SHIFT) shiftMult = 3;
+
 		cantUnpause -= elapsed;
 		if (pauseMusic.volume < 0.5)
 			pauseMusic.volume += 0.01 * elapsed;
@@ -240,16 +243,31 @@ class PauseSubState extends MusicBeatSubstate
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
 
-		if (upP)
-		{
-			changeSelection(-1);
+		if (upP){
+			changeSelection(-shiftMult);
+			holdTime = 0;
 		}
-		if (downP)
-		{
-			changeSelection(1);
+
+		if (downP){
+			changeSelection(shiftMult);
+			holdTime = 0;
 		}
-		if (controls.BACK)
-		{
+
+		if(controls.UI_DOWN || controls.UI_UP){
+			var checkLastHold:Int = Math.floor((holdTime - 0.5) * 10);
+			holdTime += elapsed;
+			var checkNewHold:Int = Math.floor((holdTime - 0.5) * 10);
+
+			if(holdTime > 0.5 && checkNewHold - checkLastHold > 0){
+				changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
+			}
+		}
+
+		if(FlxG.mouse.wheel != 0){
+			changeSelection(-shiftMult * FlxG.mouse.wheel);
+		}
+
+		if (controls.BACK){
 			close();
 		}
 

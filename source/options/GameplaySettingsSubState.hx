@@ -44,7 +44,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			"Si no está marcado, al estar en otra ventana\nel juego seguirá ejecutándose.\n(Idea tomada de DDTO+)",
 			'noPause',
 			'bool',
-			false);
+			true);
 		addOption(option);
 		option.onChange = onChangeAutoPause;
 

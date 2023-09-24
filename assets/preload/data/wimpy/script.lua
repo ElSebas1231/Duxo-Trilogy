@@ -41,6 +41,7 @@ function onStepHit()
 	end
 end
 
+local allowEndShit = false
 function onEndSong()
 	if not allowEndShit and isStoryMode and not seenCutscene then
 	 	setProperty('inCutscene', true);

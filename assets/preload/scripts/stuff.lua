@@ -79,12 +79,7 @@ end
 
 function onGameOverStart()
     if boyfriendName == 'bf-aquino' then
-        if not mustHitSection then
-            setProperty('camFollow.x', 1020) --Fix the camera 'x' pos
-	        setProperty('camFollow.y', 480) --Fix the camera 'y' pos
-        elseif mustHitSection then
-            setProperty('camFollow.x', 650) --Fix the camera 'x' pos
-	        setProperty('camFollow.y', 400) --Fix the camera 'y' pos
-        end
+        setProperty('camFollow.x', getProperty('boyfriend.x') + 200)
+        setProperty('camFollow.y', getProperty('boyfriend.y') + 200)
     end
 end

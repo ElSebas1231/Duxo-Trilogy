@@ -411,16 +411,11 @@ class PlayState extends MusicBeatState
 		var rpcStages:Array<String> = [
 			'amquino', 'andreh', 'c3jomall', 'canceladobg',
 			'comercialbg', 'creisibg', 'cuartocreisi',
-			'don', 'enano', 'end', 'endless',
+			'don', 'enano', 'end', 'endless', 'school',
 			'feriapayasito', 'feriapayasitoevil', 'lau',
 			'laulimo', 'limotomy', 'mallduxo', 'mallduxoevil',
 			'missingno', 'mono', 'pingasta','pingasta2', 'side', 
 			'sotanoxd', 'school', 'spooky', 'thunder', 'tiky', 'ytfondo'
-		];
-
-		var rpcSongs:Array<String> = [
-			'wimpy', 'restless', 'maussigno',
-			'lata-pro', 'esotilin'
 		];
 
 		curStage = SONG.stage;
@@ -441,6 +436,20 @@ class PlayState extends MusicBeatState
 		for (d in 0...rpcStages.length){
 			if (curStage.toLowerCase() == rpcStages[d]){
 				stagePortrait = rpcStages[d];
+			}else if (SONG.song.toLowerCase() == 'enano' || SONG.song.toLowerCase() == 'test'){
+				stagePortrait = 'enanoalt';
+			}else if (SONG.song.toLowerCase() == '4mesesdesub'){
+				stagePortrait = '4mesesdesub';
+			}else if (SONG.song.toLowerCase() == 'wimpy'){
+				stagePortrait = 'wimpy';
+			}else if (SONG.song.toLowerCase() == 'creisi vs mau187'){
+				stagePortrait = 'creisi_vs_mau187';
+			}else if (SONG.song.toLowerCase() == 'lata pro'){
+				stagePortrait = 'lata-pro';
+			}else if (SONG.song.toLowerCase() == 'restless'){
+				stagePortrait = 'restless';
+			}else if (SONG.song.toLowerCase() == 'esotilin'){
+				stagePortrait = 'esotilin';
 			}
 		}
 
@@ -454,14 +463,6 @@ class PlayState extends MusicBeatState
 			stagePortrait = 'tt';
 		}else if (curStage == 'week17' || curStage == 'blu'){
 			stagePortrait = 'week17';
-		}
-
-		for (s in 0...rpcSongs.length){
-			if (songName == rpcSongs[s]){
-				stagePortrait == rpcSongs[s];
-			}else if(songName == 'test' || songName == 'enano'){
-				stagePortrait = 'enanoalt';
-			}
 		}
 
 		var stageData:StageFile = StageData.getStageFile(curStage);

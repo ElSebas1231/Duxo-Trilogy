@@ -59,7 +59,7 @@ end
 
 function onStepHit()
 	if isStoryMode then
-		if curStep == 50 then
+		if curStep == 50 and seenCutscene then
 			triggerEvent('Intro3', 'Sonando:', 'Wing Web\nDe: Laleritose')
 		end
 	end
